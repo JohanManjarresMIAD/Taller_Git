@@ -24,6 +24,7 @@ def load_data():
     df = pd.read_csv('datos_energia.csv')
     #Change name from 'time' to 'fecha'
     df['fecha'] = pd.to_datetime(df['time'])
+    #Set index as time
     df.set_index('fecha', inplace=True)
     return df
     
